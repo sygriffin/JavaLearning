@@ -1,3 +1,4 @@
+import javax.print.DocFlavor;
 import java.math.BigDecimal;
 
 public class Main {
@@ -57,6 +58,26 @@ public class Main {
 
 
 
+        for (int z = 0; z< 10 ; z++) {
+            System.out.println(z);
+        }
+
+
+        int x = 0;
+        while (x<10) {
+
+            System.out.println(x++);
+        }
+
+        Dog dog = new Dog();
+
+        dog.bark();
+
+
+        A classA = new A("aaa");
+        A classA1 = new A();
+        classA.funA();
+        classA.funA(6);
 
 
     }
@@ -66,5 +87,42 @@ public class Main {
     }
 
 
+    static class Dog {
+        //如果一个方法中有与成员变量同名的局部变量，则方法中访问的是局部变量，而不是成员变量
+        public String color;
+        String name;
+        Integer age;
+        void bark (){
+            System.out.println("wang wang");
+        }
+    }
 
+}
+
+class A {
+
+    String name;
+
+    A() {}
+
+
+    A(String aName){
+        name = aName;
+    }
+
+    void  funA() {
+        System.out.println("empty func");
+    }
+
+    void funA(int i) {
+        System.out.println(i);
+    }
+}
+
+class Person {
+    String name;
+
+    void talk() {
+        System.out.println("My name is " + name);
+    }
 }
