@@ -79,6 +79,14 @@ public class Main {
         classA.funA();
         classA.funA(6);
 
+        Person p = new Person();
+        p.name = "lisi";
+        p.talk();
+
+
+
+
+
 
     }
 
@@ -119,10 +127,36 @@ class A {
     }
 }
 
+//this 关键字(对象本身，相当于OC-self)
+
 class Person {
+
     String name;
 
+    int age;
+
+    String address;
+
+    Person() {
+
+    }
+
+    Person(String name , int age) {
+        this();
+        this.name = name;
+        this.age  = age;
+    }
+
+    Person(String name , int age, String address) {
+        //直接调用本类中的构造函数，this这条语句必须在第一句
+        this(name, age);
+        this.address = address;
+    }
+
+
+
     void talk() {
-        System.out.println("My name is " + name);
+        //使用成员变量使用this，不然默认为传入参数
+        System.out.println("My name is " + this.name);
     }
 }
