@@ -83,6 +83,13 @@ public class Main {
         p.name = "lisi";
         p.talk();
 
+        Person.i = 6;//static静态成员变量可以使用类名调用, 生成的person对象会公用这个成员变量
+
+        Person q = new Person();
+        System.out.println(q.i);
+
+        Person.fun();
+
 
 
 
@@ -154,9 +161,27 @@ class Person {
     }
 
 
+    static  int i;
+
+    //静态函数
+    static  void  fun() {
+//        静态函数中不能引用非静态的，不存在类的对象
+//        System.out.println("My name is " + this.name);
+        System.out.println("静态函数");
+    }
+
 
     void talk() {
         //使用成员变量使用this，不然默认为传入参数
         System.out.println("My name is " + this.name);
     }
+
+    //静态代码块 -- 在装载这个类的时候执行，无需调用，实际上用的也不多
+    static  {
+        System.out.println("static block");
+    }
 }
+
+//static关键字
+
+
