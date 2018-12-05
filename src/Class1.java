@@ -61,13 +61,15 @@ class Printer {
         System.out.println("=======open=======");
     }
 
-    void  close() {
+    void close() {
         System.out.println("=======close=======");
     }
 
-    void  print(String str) {
+    void print(String str) {
         System.out.println("=======print======="+str);
     }
+
+
 
 }
 
@@ -85,3 +87,7 @@ class CannonPrinter extends Printer {
 
 }
 
+//利用抽象类排除错误
+class HPPrinter extends Printer {
+
+}
