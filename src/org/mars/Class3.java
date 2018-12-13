@@ -26,7 +26,9 @@ public class Class3 {
 
     //default -- 不指定访问权限时（包级别访问限制）
 
-    //protected 以及，继承的问题
+    //protected 以及，继承的问题（只能修饰成员变量成员函数）（子类和父类在不同的包中，可继承成员变量，使用protected，仅有子类可以访问使用继承成员变量，不同于public）
+
+    //protected -- （让成员变量成为你专有并且可以跨包访问的）
 
     //访问权限与继承
 
@@ -41,24 +43,9 @@ public class Class3 {
 
         //熟悉Java的各种库以及函数调用
 
-
         DaRen daren = new DaRen();
 
         daren.eat();
-
-        //
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

@@ -39,9 +39,7 @@ public class Class1 {
 
         if (flag == 0) {
             CannonPrinter printer = new CannonPrinter();
-            printer.open();
-            printer.print("abc");
-            printer.close();
+
         } else {
             Printer printer = new Printer();
             printer.open();
@@ -50,6 +48,10 @@ public class Class1 {
         }
 
         Class3 cl3 = new Class3();
+
+
+        ///工厂方法，传入是什么类型的打印机
+
 
 
 
@@ -75,21 +77,43 @@ class Printer {
 
 }
 
-class CannonPrinter extends Printer {
-
-    @Override
-    void close() {
-        this.clean();
-        super.close();
-    }
+class CannonPrinter implements AllPrinter {
 
     void  clean() {
         System.out.println("=======clean=======");
     }
 
+    @Override
+    public void allOpen() {
+
+    }
+
+    @Override
+    public void allClosed() {
+
+    }
+
+    @Override
+    public void allPrint(String s) {
+
+    }
 }
 
 //利用抽象类排除错误
-class HPPrinter extends Printer {
+class HPPrinter implements AllPrinter {
 
+    @Override
+    public void allOpen() {
+
+    }
+
+    @Override
+    public void allClosed() {
+
+    }
+
+    @Override
+    public void allPrint(String s) {
+
+    }
 }
