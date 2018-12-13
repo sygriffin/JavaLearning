@@ -2,7 +2,7 @@
 /**
  * Created by songyang on 2018/11/29.
  */
-
+import org.mars.Class3;
 
 public class Class1 {
 
@@ -48,6 +48,8 @@ public class Class1 {
             printer.print("abc");
             printer.close();
         }
+
+        Class3 cl3 = new Class3();
 
 
 

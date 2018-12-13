@@ -1,6 +1,9 @@
 /**
  * Created by songyang on 2018/12/4.
  */
+
+package mars;
+
 public class Class2 {
 
 
@@ -22,7 +25,6 @@ public class Class2 {
 }
 
 //拥有抽象函数的一定是抽象类(天生用来被继承的)
-
 abstract class Ren {
     String name;
     int age;
@@ -36,23 +38,6 @@ abstract class Ren {
     }
 
     abstract void eat();
-}
-//抽象类可以有构造函数吗？-- 可以
-class DaRen extends Ren {
-
-    DaRen() {
-        //此处应有super
-
-        System.out.println("22222");
-    }
-
-    @Override
-    void eat() {
-        System.out.println("da ren");
-    }
-
-
-
 }
 
 
