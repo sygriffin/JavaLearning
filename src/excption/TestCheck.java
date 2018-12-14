@@ -56,8 +56,8 @@ public class TestCheck {
         //从文件读数据
         try {
 
-            fis = new FileInputStream("/Users/songyang/Desktop/1.txt");
-            fos = new FileOutputStream("/Users/songyang/Desktop/2.txt");
+            fis = new FileInputStream("/Users/songyang/Desktop/github/JavaLearning/1.txt");
+            fos = new FileOutputStream("/Users/songyang/Desktop/github/JavaLearning/2.txt");
 
             //返回读取的字节数
 
@@ -104,8 +104,8 @@ public class TestCheck {
 
         try {
 
-            fr = new FileReader("/Users/songyang/Desktop/1.txt");
-            fw = new FileWriter("/Users/songyang/Desktop/2.txt");
+            fr = new FileReader("/Users/songyang/Desktop/github/JavaLearning/1.txt");
+            fw = new FileWriter("/Users/songyang/Desktop/github/JavaLearning/2.txt");
 
 
 
@@ -136,6 +136,7 @@ public class TestCheck {
             }
 
         }
+
 
 
 
