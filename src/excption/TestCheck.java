@@ -1,6 +1,7 @@
 package excption;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import java.io.*;
 
 /**
  * Created by songyang on 2018/12/13.
@@ -32,10 +33,46 @@ public class TestCheck {
 
 
         try {
-            user.setAge(-20);
+            user.setAge(20);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        //输入输出I/O -- 对数据进行读写操作
+
+        //数据流stream
+
+        //InputStream
+        //OutputStream
+
+        //输入输出流
+
+        FileInputStream fis = null;
+        //向文件写数据
+        FileOutputStream fos = null;
+        byte [] buffer = new byte[100];
+
+        //从文件读数据
+        try {
+            fis = new FileInputStream("/Users/songyang/Desktop/1.txt");
+            fos = new FileOutputStream("/Users/songyang/Desktop/2.txt");
+            int temp = fis.read(buffer,0,buffer.length);
+//            for (int i = 0; i < buffer.length; i++){
+//                System.out.println(buffer[i]);
+//                //读出来的是ASCII码 --
+//            }
+
+            fos.write(buffer,0,temp);
+            String s = new String(buffer);
+            s = s.trim();//去掉首尾空格和空字符
+            System.out.println(s);
+
+        } catch ( Exception e){
+            System.out.println(e);
+        }
+
+
 
 
 
