@@ -137,6 +137,47 @@ public class TestCheck {
 
         }
 
+        //节点流与处理流的关系与使用实例
+
+        //处理流 -- BufferedReader （字符输入处理流）
+        //readLine() -- 一次读取一行数据 --- /Users/songyang/Desktop/msg.txt
+
+        //如何生成BufferedReader对象 -- 接受Reader类型的对象
+
+
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+
+        try {
+            fileReader = new FileReader("/Users/songyang/Desktop/msg.txt");
+            bufferedReader = new BufferedReader(fileReader);
+            String line = null;
+
+            while (true) {
+                line = bufferedReader.readLine();
+                if (line == null) {
+                    break;
+                }
+                System.out.println(line);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        finally {
+            try {
+                bufferedReader.close();
+                fileReader.close();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
+
+        //装饰者设计模式
+
+
+
 
 
 
