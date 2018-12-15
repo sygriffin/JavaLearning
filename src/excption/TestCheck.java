@@ -149,7 +149,7 @@ public class TestCheck {
         BufferedReader bufferedReader = null;
 
         try {
-            fileReader = new FileReader("/Users/songyang/Desktop/msg.txt");
+            fileReader = new FileReader("/Users/songyang/Desktop/github/JavaLearning/msg.txt");
             bufferedReader = new BufferedReader(fileReader);
             String line = null;
 
