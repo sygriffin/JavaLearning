@@ -1,6 +1,11 @@
 package excption;
 
 
+import innerclass.ITA;
+import innerclass.ITAImp;
+import innerclass.ITB;
+import innerclass.InnerA;
+
 import java.io.*;
 
 /**
@@ -174,7 +179,36 @@ public class TestCheck {
         }
 
 
-        //装饰者设计模式
+        //装饰者设计模式 -- 参考Worker
+
+
+
+        //生成内部类，外部类
+        InnerA a = new InnerA();
+        InnerA.InnerB b = a.new InnerB();
+
+        //b可以使用a的成员变量，但是b并不是继承了a的成员变量
+        a.i = 3;
+        b.j = 5;
+
+        int result = b.funB();
+        System.out.println(result);
+
+        //跨包了，必须public
+
+        //匿名内部类
+        //ITAImp itaImp = new ITAImp();
+        //ITA ita = itaImp;//向上转型
+        ITB itb = new ITB();
+        itb.fun(new ITA() {
+            @Override
+            //匿名的ITA的实现类
+            public void doSomething() {
+                System.out.println("匿名内部类");
+            }
+        });
+
+
 
 
 
