@@ -104,9 +104,36 @@ public class Array {
         //当键值相同时，后面的会把前面的值覆盖 -- 排除原来的
 
 
+        //isEqual -- ==(基本数据类型为=) (值类型 -- 判断两个引用是否指向同一块堆内存地址)
 
 
+        EqualUser u1 = new EqualUser();
+        EqualUser u2 = new EqualUser();
+        EqualUser u3 = u1;
+        EqualUser u4 = new EqualUser();
 
+        u1.Ename = "111";
+        u1.Eage = 11;
+        u2.Ename = "222";
+        u2.Eage = 11;
+        u4.Ename = "111";
+        u4.Eage = 11;
+
+
+        boolean aaa = u1 == u2;
+        boolean bbb = u1 == u3;
+
+        boolean ccc = u1.equals(u2);
+        boolean ddd = u1.equals(u3);
+        boolean eee = u1.equals(u4);
+
+        //equals 比较两个对象的内容相等 --> 通常情况下 1.两个对象类型相同 2.两个对象成员变量值相同
+
+        System.out.println(aaa);
+        System.out.println(bbb);
+        System.out.println(ccc);
+        System.out.println(ddd);
+        System.out.println(eee);// --> 此时u1 == u4
 
 
 
