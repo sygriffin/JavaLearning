@@ -88,6 +88,30 @@ public class Array {
             System.out.println(s);
         }
 
+        //Map -- Dictionary
+
+        HashMap<String,String> hashMap = new HashMap<String,String>();
+
+        Map<String,String> map = hashMap;
+
+        map.put("1","a");
+        map.put("2","b");
+        map.put("3","c");
+        System.out.println("map size is " + map.size());
+
+        map.get("3");
+
+        //当键值相同时，后面的会把前面的值覆盖 -- 排除原来的
+
+
+
+
+
+
+
+
+
+
 
 
 
