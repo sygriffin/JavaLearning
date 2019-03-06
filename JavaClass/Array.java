@@ -17,10 +17,10 @@ public class Array {
         System.out.println(args.length);
 
         //args -- 接受键盘录入的
-        
-        
+        double b = Math.random();
+        System.out.println(b);
 
-
+        
 
     }
     
