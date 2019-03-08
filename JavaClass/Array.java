@@ -20,7 +20,19 @@ public class Array {
         double b = Math.random();
         System.out.println(b);
 
+        //静态代码块是优先于主方法执行的
+
+        //优先加载父类
+
+        //先输出静态代码块
+
         
+
+
+
+
+
+
 
     }
     
