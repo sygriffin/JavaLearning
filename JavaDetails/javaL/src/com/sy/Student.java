@@ -27,7 +27,7 @@ public class Student {
     }
 
 
-    Student(String name, int age) {
+    public Student(String name, int age) {
         this.age = age;
         this.name = name;
 
@@ -39,4 +39,8 @@ public class Student {
         return this.name.equals(s.name) && this.age == s.age;
     }
 
+    @Override
+    public String toString() {
+        return "Student [name =" + name + ", age = " + age + "]";
+    }
 }

@@ -2,10 +2,17 @@ package com.basic;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
  * Created by songyang on 2019/3/23.
+ *
+ *
+ *
  */
 public class Demo_System {
 
@@ -67,120 +74,30 @@ public class Demo_System {
         date2.setTime(1000);
         System.out.println(date2);
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //转字符串了SimpleDateFormat
+//        DateFormat df  = new DateFormat(); -- 抽象类不允许实例化
+        DateFormat df1 = DateFormat.getDateInstance();
+        DateFormat df2 = new SimpleDateFormat();
+
+        //以上两句相同
+
+        //输出默认格式日期
+        Date currentDate = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+        System.out.println(sdf.format(currentDate));
+
+        //直接在simpleDateFormat里给定日期格式
+
+        //将时间字符串转换成日期对象
+        String dateStr = "2000年08月08日08:00:00";
+
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy年MM月dd日HH:mm:ss");
+        try {
+            Date cd = sdf1.parse(dateStr);
+            System.out.println(cd);
+        } catch (Exception e ){
+            System.out.println(e);
+        }
 
 
 
