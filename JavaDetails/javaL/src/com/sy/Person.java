@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * Created by songyang on 2019/4/1.
  */
-public class Person {
+public class Person implements Comparable<Person>{
 
 
 
@@ -80,5 +80,16 @@ public class Person {
                 Objects.equals(name, person.name);
     }
 
+    @Override
+    public int compareTo(Person o) {
+        //如何对比的 -- 返回的值？//仍然存在碰撞的问题
+        int num = this.age - o.age;
+        return num == 0?this.name.compareTo(o.name):num;
+
+    }
+
     //健壮性判断 --
+
+
+
 }
