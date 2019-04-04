@@ -74,6 +74,9 @@ public class Demo_Collection {
 
         //迭代器原理 -- 向上抽取出接口
 
+        //实际上就是一种抽取遍历过程的一种手段
+
+
 
 
 
