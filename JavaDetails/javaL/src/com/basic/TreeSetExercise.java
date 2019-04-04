@@ -33,9 +33,27 @@ public class TreeSetExercise {
 
         String string = "helloitcastt";
 //        ArrayList<Character> arrayList1 = string.toCharArray();
+        char [] arr = string.toCharArray();
 
+        TreeSet<Character> ts = new TreeSet<>(new Comparator<Character>() {
+            @Override
+            public int compare(Character o1, Character o2) {
+                int num = o1 - o2;
+                return num == 0 ? 1:num;
+            }
+        });
+
+        for (char c : arr) {
+            ts.add(c);
+        }
+
+        for (Character ch : ts){
+            System.out.print(ch);
+        }
 
     }
+
+
 
     public static void sort (List<String> list) {
 
