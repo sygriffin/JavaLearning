@@ -1,7 +1,6 @@
 package com.map;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by songyang on 2019/4/4.
@@ -21,6 +20,12 @@ public class Demo_Map {
         map.put("赵六",26);
 
         System.out.println(map);
+
+        System.out.println(map.get("张三"));
+        //获取每一个对象那个
+        Set<Map.Entry<String,Integer>> set = map.entrySet();
+        Iterator<Map.Entry<String,Integer>> iterator = set.iterator();
+
 
     }
 
